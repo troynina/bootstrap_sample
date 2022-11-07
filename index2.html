@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-success">{{about}}</h1>
+    <form method="POST">
+    {% for p in a %}
+        <input type="text" class="text-success" name="{{p}}" /> <br /><br /><br />
+    {% endfor %}
+        <input type="submit" class="text-success" value="Done!" />
+    </form>
+
+    {% if res %}
+    <h2 class=""text-success>{{res}}</h2>
+    {% endif %}
+    <h2 class="text-success fst-italic">Все выводится в одной строке :)</h2>
+</body>
+</html>
